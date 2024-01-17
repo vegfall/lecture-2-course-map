@@ -29,7 +29,11 @@ export function KommuneLayerCheckbox({
   );
 
   useEffect(() => {
-    setLayers((old) => [...old, kommuneLayer]);
+    if (checked) {
+      setLayers((old) => [...old, kommuneLayer]);
+    } else {
+      setLayers((old) => old.filter((l) => l !== kommuneLayer));
+    }
   }, [checked]);
 
   return (
