@@ -1,6 +1,7 @@
 import React, {MutableRefObject, useEffect, useRef} from "react";
 
 import "./application.css";
+import "ol/ol.css"
 import {Map, View} from "ol";
 import TileLayer from "ol/layer/Tile";
 import {OSM} from "ol/source";
