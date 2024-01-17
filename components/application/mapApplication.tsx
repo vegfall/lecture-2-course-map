@@ -6,6 +6,7 @@ import { Map, View } from "ol";
 import TileLayer from "ol/layer/Tile";
 import { OSM } from "ol/source";
 import { useGeographic } from "ol/proj";
+import { KommuneLayerCheckbox } from "../kommune/kommuneLayerCheckbox";
 
 useGeographic();
 
@@ -33,7 +34,9 @@ export function MapApplication() {
       <header>
         <h1>My Map</h1>
       </header>
-      <nav>Actions</nav>
+      <nav>
+        <KommuneLayerCheckbox />
+      </nav>
       <main ref={mapRef}></main>
     </>
   );
