@@ -29,7 +29,12 @@ export function MapApplication() {
 
   useEffect(() => {
     map.setLayers(layers);
-  }, [layers]);
+  },
+
+
+
+
+      [layers]);
 
   useEffect(() => {
     map.setTarget(mapRef.current);
