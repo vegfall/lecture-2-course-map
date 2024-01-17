@@ -28,6 +28,10 @@ export function KommuneLayerCheckbox({
     [],
   );
 
+  useEffect(() => {
+    setLayers((old) => [...old, kommuneLayer]);
+  }, [checked]);
+
   return (
     <div>
       <label>
